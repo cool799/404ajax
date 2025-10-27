@@ -1,0 +1,144 @@
+/**
+ * Outline Editor Styles
+ * CMPUT 404 Flask and AJAX Lab
+ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.outline-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.outline-item {
+    margin-bottom: 8px;
+}
+
+.outline-item-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.outline-item-content:hover {
+    background-color: #f5f5f5;
+}
+
+.outline-item input[type="text"] {
+    flex: 1;
+    padding: 8px 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.outline-item input[type="text"]:focus {
+    border-color: #667eea;
+}
+
+.outline-item input[type="text"]::placeholder {
+    color: #999;
+}
+
+.outline-buttons {
+    display: flex;
+    gap: 4px;
+}
+
+.outline-buttons button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    outline: none;
+}
+
+.add-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.add-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.add-btn:active {
+    transform: scale(0.95);
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #da190b;
+    transform: scale(1.05);
+}
+
+.delete-btn:active {
+    transform: scale(0.95);
+}
+
+.outline-children {
+    margin-left: 32px;
+    margin-top: 8px;
+    padding-left: 16px;
+    border-left: 2px solid #e0e0e0;
+}
+
+.outline-item:first-child .outline-item-content {
+    font-weight: 600;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.outline-item:first-child .outline-item-content:hover {
+    background-color: #f0f0f0;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .outline-container {
+        padding: 12px;
+    }
+    
+    .outline-children {
+        margin-left: 16px;
+        padding-left: 8px;
+    }
+    
+    .outline-item input[type="text"] {
+        font-size: 12px;
+    }
+    
+    .outline-buttons button {
+        padding: 4px 8px;
+        font-size: 14px;
+    }
+}
